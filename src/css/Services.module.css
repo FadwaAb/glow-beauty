@@ -1,0 +1,442 @@
+/* ========== SERVICES SECTION ========== */
+
+.services {
+  position: relative;
+  padding: 100px 60px 80px;
+  background: #FFF9F8;
+  overflow: hidden;
+}
+
+
+/* ========== SECTION HEADER ========== */
+
+.header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #3B3B3B;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+/* The glow word - "Beauty Services" with soft pink highlight behind text */
+.glowText {
+  position: relative;
+  display: inline;
+  color: #E8AEB7;
+}
+
+/* Soft pink highlight behind the text - like "Here" in screenshot */
+.glowText::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: -6px;
+  right: -6px;
+  height: 18px;
+  background: rgba(232, 174, 183, 0.2);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+
+
+/* ========== SERVICES GRID ========== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* ========== CARD ========== */
+
+.card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  overflow: hidden;
+
+  box-shadow:
+    0 4px 20px rgba(196, 138, 149, 0.08);
+
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+
+.cardVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 50px rgba(196, 138, 149, 0.18);
+}
+
+
+
+/* ========== IMAGE ========== */
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition:
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 60%,
+      rgba(255,255,255,0.4) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+
+/* ========== BADGE ========== */
+
+.badge {
+  position: absolute;
+
+  top: 16px;
+  left: 16px;
+
+  padding: 6px 14px;
+
+  border-radius: 50px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  color: #FFFFFF;
+
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  box-shadow:
+    0 2px 8px rgba(0,0,0,0.1);
+
+  z-index: 2;
+}
+
+
+
+/* ========== CONTENT ========== */
+
+.content {
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+}
+
+
+.category {
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  color: #C48A95;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+}
+
+
+.name {
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  color: #3B3B3B;
+
+  line-height: 1.2;
+
+}
+
+
+.description {
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #7A6B6E;
+
+}
+
+
+
+/* ========== META ========== */
+
+.meta {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-top: 4px;
+
+  padding-top: 12px;
+
+  border-top:
+    1px solid rgba(232,180,188,0.15);
+
+}
+
+
+.duration {
+
+  font-size: 13px;
+
+  color: #9A8B8E;
+
+  font-weight: 500;
+
+}
+
+
+.price {
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  color: #C48A95;
+
+}
+
+
+
+/* ========== BUTTONS ========== */
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.bookBtn {
+  flex: 1;
+  padding: 14px 24px;
+  border: 1.5px solid rgba(232,180,188,0.4);
+  border-radius: 50px;
+  background: transparent;
+  color: #C48A95;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.bookBtn:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #E8B4BC 0%,
+      #C48A95 100%
+    );
+  color: white;
+  border-color: transparent;
+  box-shadow:
+    0 6px 20px rgba(196,138,149,0.35);
+  transform: translateY(-1px);
+}
+
+/* ========== VIEW DETAILS BUTTON ========== */
+.viewDetailsBtn {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 1.5px solid rgba(196, 138, 149, 0.4);
+  background: transparent;
+  color: #C48A95;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  letter-spacing: 0.3px;
+  text-align: center;
+  outline: none;
+}
+
+.viewDetailsBtn:hover {
+  background: rgba(196, 138, 149, 0.1);
+  border-color: #C48A95;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(196, 138, 149, 0.15);
+}
+
+
+
+/* ========== RESPONSIVE ========== */
+
+
+@media (max-width:1024px){
+
+  .services{
+    padding:80px 40px 60px;
+  }
+
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+  }
+
+
+  .sectionTitle{
+    font-size:40px;
+  }
+
+}
+
+
+
+@media (max-width:768px){
+
+  .services{
+    padding:60px 24px 40px;
+  }
+
+
+  .header{
+    margin-bottom:40px;
+  }
+
+
+  .sectionTitle{
+    font-size:32px;
+  }
+
+  .glowText::after {
+    height: 14px;
+    bottom: 1px;
+    left: -4px;
+    right: -4px;
+  }
+
+
+  .grid{
+
+    grid-template-columns:1fr;
+
+    max-width:400px;
+
+    margin:auto;
+
+  }
+
+
+  .imageWrapper{
+    height:220px;
+  }
+
+}
+
+
+
+@media (max-width:480px){
+
+  .services{
+
+    padding:50px 20px 30px;
+
+  }
+
+
+  .sectionTitle{
+
+    font-size:28px;
+
+  }
+
+  .glowText::after {
+    height: 12px;
+    left: -3px;
+    right: -3px;
+  }
+
+
+  .sectionSubtitle{
+
+    font-size:14px;
+
+  }
+
+
+  .content{
+
+    padding:20px;
+
+  }
+
+
+  .name{
+
+    font-size:20px;
+
+  }
+
+}
