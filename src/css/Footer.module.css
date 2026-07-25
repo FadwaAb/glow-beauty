@@ -443,19 +443,3 @@
   }
 }
 
-/* ====== DARK MODE ====== */
-@media (prefers-color-scheme: dark) {
-  .footer {
-    --text-dark: #F5F5F5;
-    --text-medium: #B0B0B0;
-    --text-light: #8A8A8A;
-    --bg-cream: #1A1A1A;
-    background: linear-gradient(180deg, #1A1A1A 0%, #2A1A1D 100%);
-    border-top-color: rgba(232, 160, 176, 0.15);
-  }
-  
-  .social-link {
-    background: #2A2A2A;
-    border-color: rgba(232, 160, 176, 0.2);
-  }
-}
